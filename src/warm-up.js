@@ -81,17 +81,20 @@ const { should } = require("chai");
 // Create a new variable "vegetables" and assign it to an Array of 5 different
 // vegetables, represented by their names as Strings.
 
+ var vegetables = ["onions", "garlic", "scallions", "peppers", "shallots"];
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
-
+ console.log(vegetables[2]); 
 
 // Create a new variable "fruits" and assign it to an Array of 7
 // different fruits.
-
+  
+ var fruits = ["apples", "oranges", "grapes", "watermelon", "pineapple", "mango", "strawberrys"];
 
 // Write the code to access the 5th element of the array, using bracket notation.
 
+ console.log(fruits[4]);
 
 //------------------------- Objects -------------------------//
 
@@ -99,7 +102,14 @@ const { should } = require("chai");
 // keys: name, and isOpen. The value for name should the string 'King Soopers' (or your favorite grocery store), and
 // the value for isOpen should be true. Which other key value pairs would make sense to add to this object?
 
-
+ var groceryStore = {
+    name: "Publix",
+    isOpen: true
+ }
 
 // Write the code to add the key of location, with the value of 'Denver, Colorado'. Use dot
 // notation to do this. DO NOT modify your code from above.
+
+ groceryStore.location = "Daytona Beach, Florida";
+
+ console.log(groceryStore);
