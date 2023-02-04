@@ -3,28 +3,31 @@ function nameMenuItem(item) {
   return menuItemName;
 }
 
-function createMenuItem(item) {
- var menuItemName = {
-    name: `${item}`,
-    price: 10.99,
-    type: "breakfast"
+function createMenuItem(menuItemName, initilPrice, type) {
+ var menuItem = {
+    name: menuItemName,
+    price: initilPrice,
+    type: type
  }
-    return menuItemName;
+    return menuItem;
 }
 
-function addIngredients(ingredients, array) {
-  array.push(ingredients);
-  if ("cheese" == true){
-    array.filter(addIngredients);
+function addIngredients(ingredient, array) {
+  if(!array.includes(ingredient)){
+    array.push(ingredient)
   }
 } 
 
+function formatPrice(item) {
+  
+    return `$${item}`
+}
 
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-  // formatPrice,
+  formatPrice,
   // decreasePrice,
   // createRecipe
 }
