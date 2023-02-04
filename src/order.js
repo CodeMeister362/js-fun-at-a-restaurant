@@ -22,13 +22,12 @@ function refundOrder(order1, deliveryOrders) {
  }
  
  function searchOrder(deliveryOrders, someOrder) {
-  var notOnList = false
   for ( var i = 0; i < deliveryOrders.length; i++) {
     if(deliveryOrders[i].item === someOrder) {
-      notOnList = true
+      return true
     }
     }
-    return notOnList
+    return false
   }
 
 
